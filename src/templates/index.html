@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Diccionario de API</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <!-- FontAwesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-CWjEhepKIo56+97mEJEdCqNnPOaNOLtQCv05lSLXJnw+G2euPGOWMxtPZkeF80RaB/UmGV9xF06RPMRoEB7Gw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <div class="container pt-3">
+        <h1 style="margin-top: 20px;">Diccionario de API para MusicPro</h1>
+
+        <!-- Término 1 -->
+        <div class="card mb-4">
+            <div class="card-header bg-primary text-white">
+                <h2>Método</h2>
+            </div>
+            <div class="card-body">
+                <p>
+                    Es la forma en que una API permite realizar alguna acción dentro de un sistema.
+                </p>
+                <h5>Ejemplo:</h5>
+                <pre><code class="language-javascript">
+fetch('https://api.com/api/get_productos', {
+  method: 'GET'
+})
+.then(response => response.json())
+.then(data => console.log(data))
+.catch(error => console.error(error));
+          </code></pre>
+                <h5>Parámetros:</h5>
+                <ul>
+                    <li><strong>method:</strong> El método HTTP utilizado para la solicitud (p. ej., GET, POST).</li>
+                    <li><strong>headers:</strong> Cabeceras adicionales para incluir en la solicitud HTTP.</li>
+                    <li><strong>body:</strong> Los datos a enviar con la solicitud, si corresponde.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Término 2 -->
+        <div class="card mb-4">
+            <div class="card-header bg-danger text-white">
+                <h2>Endpoint</h2>
+            </div>
+            <div class="card-body">
+                <p>Es la URL única que corresponde a un recurso en particular.</p>
+                <h5>Ejemplo:</h5>
+                <p>https://api.com/api/get_productos</p>
+            </div>
+        </div>
+
+        <!-- Término 3 -->
+        <div class="card mb-4">
+            <div class="card-header bg-warning text-white">
+                <h2>Autenticación</h2>
+            </div>
+            <div class="card-body">
+                <p>Las APIs pueden requerir algún tipo de autenticación para acceder a la funcionalidad que ofrecen.</p>
+                <h5>Tipo de autenticación:</h5>
+                <ul>
+                    <li><strong>Token:</strong> Proporciona un token de acceso con cada solicitud (p. ej., JWT).</li>
+                    <li><strong>Clave API:</strong> Proporciona una clave de API única con cada solicitud.</li>
+                    <li><strong>Básica:</strong> Utiliza la autenticación básica de HTTP (nombre de usuario y
+                        contraseña).</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Término 4 -->
+        <div class="card mb-4">
+            <div class="card-header bg-success text-white">
+                <h2>Respuesta</h2>
+            </div>
+            <div class="card-body">
+                <p>Cuando se realiza una solicitud a una API, se recibe una respuesta en formato JSON u otro formato.
+                </p>
+                <h5>Formatos admitidos:</h5>
+                <ul>
+                    <li><strong>JSON:</strong> Un formato de datos ligero y fácil de leer y escribir para humanos y
+                        máquinas.</li>
+                    <li><strong>XML:</strong> Un formato de marcas similar al HTML utilizado para describir datos.</li>
+                    <li><strong>Texto sin formato:</strong> Puede ser útil para ciertas solicitudes, como devolver
+                        información binaria.</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi4W21S"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
+        integrity="sha384-TpDvsgZ57U1IUBugBqRi/t7e60FZxjNpdN/JCwOoKKNtTc6tsmw0MkZWtPdSaGpx"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
