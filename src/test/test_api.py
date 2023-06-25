@@ -7,6 +7,10 @@ def test_get_productos_success():
         rv = client.get('/api/get_productos')
         assert rv.status_code == 200
 
+def test_get_tipo_productos_success():
+    with app.test_client() as client:
+        rv = client.get('/api/get_productos?tipo_producto=1')
+        assert rv.status_code == 200
 
 def test_exchange_rate_success():
     with app.test_client() as client:
@@ -21,3 +25,4 @@ def test_format_price_clp():
     
     # Prueba con un precio exactamente 1 millón
     assert format_price_clp(1000000) == '$1.000.000'
+
