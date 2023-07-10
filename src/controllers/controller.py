@@ -52,6 +52,9 @@ def get_productos():
         db_session.close_all()
 
 
+
+
+
 # Converidor de Moneda https://music-pro-api.herokuapp.com/api/exchange_rate?amount_clp=1000
 @api_producto.route('/api/exchange_rate', methods=['GET'])
 def exchange_rate():
